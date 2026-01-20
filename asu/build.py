@@ -138,7 +138,7 @@ def _build(build_request: BuildRequest, job=None):
             else:
                 report_error(job, f"Repository {repo} not allowed")
 
-        repositories += "src imagebuilder file:packages\noption check_signature"
+        repositories += "src imagebuilder file:packages"
 
         (bin_dir / "repositories.conf").write_text(repositories)
 
